@@ -16,17 +16,10 @@
             "outputPath": "dist/auth-guards-and-resolvers",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -77,19 +70,11 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
+            "scripts": ["../node_modules/bootstrap/dist/js/bootstrap.js"]
           }
         }
       }
@@ -107,17 +92,13 @@
             "outputPath": "dist/courses",
             "index": "projects/courses/src/index.html",
             "main": "projects/courses/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/courses/tsconfig.app.json",
             "assets": [
               "projects/courses/src/favicon.ico",
               "projects/courses/src/assets"
             ],
-            "styles": [
-              "projects/courses/src/styles.css"
-            ],
+            "styles": ["projects/courses/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -168,18 +149,13 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/courses/tsconfig.spec.json",
             "assets": [
               "projects/courses/src/favicon.ico",
               "projects/courses/src/assets"
             ],
-            "styles": [
-              "projects/courses/src/styles.css"
-            ],
+            "styles": ["projects/courses/src/styles.css"],
             "scripts": []
           }
         }
