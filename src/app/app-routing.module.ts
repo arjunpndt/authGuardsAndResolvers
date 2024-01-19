@@ -4,16 +4,16 @@ import { HomeComponent } from './components/home/home.component';
 import { FeaturesComponent } from './components/features/features.component';
 import { LoginComponent } from './components/login/login.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { authGuard } from './guards/auth.guard';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'features', component: FeaturesComponent },
   { path: 'login', component: LoginComponent },
   {
     path: 'admin',
-    canActivate: [authGuard],
+    canActivate: [AuthGuard],
     loadChildren: () =>
       import('./modules/admin/admin.module').then(
         (module) => module.AdminModule
