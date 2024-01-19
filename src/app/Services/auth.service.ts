@@ -8,9 +8,10 @@ import { Observable, of, throwError } from 'rxjs';
 export class AuthService {
   constructor(private router: Router) {}
 
-  setToken(username: { name: string; username: string }) {
-    localStorage.setItem('name', username.name);
-    localStorage.setItem('username', username.username);
+  setToken(name: string, username: string, userType: string) {
+    localStorage.setItem('name', name);
+    localStorage.setItem('username', username);
+    localStorage.setItem('userType', userType);
   }
 
   getToken(): string | null {
@@ -24,13 +25,17 @@ export class AuthService {
   logout() {
     localStorage.removeItem('username');
     localStorage.removeItem('name');
+    localStorage.removeItem('userType');
     this.router.navigate(['login']);
   }
 
   login({ username, password }: any): Observable<any> {
     if (username === 'arjun' && password === 'arjun') {
-      this.setToken({ name: 'Arjun Pandit', username: 'arjunpandit' });
+      this.setToken('Arjun Pandit', 'arjunpandit', 'user');
       return of({ name: 'Arjun Pandit', username: 'arjunpandit' });
+    } else if (username === 'admin' && password === 'admin') {
+      this.setToken('Admin', 'admin', 'admin');
+      return of({ name: 'admin', username: 'admin' });
     }
     return throwError(new Error('Failed to login'));
   }

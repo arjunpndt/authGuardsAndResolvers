@@ -6,6 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AuthGuard } from './guards/auth.guard';
 
+// lazy loading implemented for admin compopent
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },

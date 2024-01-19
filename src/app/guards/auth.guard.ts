@@ -16,10 +16,16 @@ export class AuthGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): boolean {
-    if (!this.auth.isLoggedIn()) {
-      // this.router.navigate(['/login']);
-      return false;
+    // if (!this.auth.isLoggedIn()) {
+    //   // this.router.navigate(['/login']);
+    //   return false;
+    // }
+    // console.log('alert', localStorage.getItem('userType'));
+
+    if (localStorage.getItem('userType') === 'admin') {
+      return true;
     }
+    alert('Only Admin Can Access this page');
     return false;
   }
 }

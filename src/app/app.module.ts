@@ -8,8 +8,7 @@ import { FeaturesComponent } from './components/features/features.component';
 import { LoginComponent } from './components/login/login.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LazyLoadComponent } from './components/lazy-load/lazy-load.component';
-// import { AdminComponent } from './components/admin/admin.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +17,6 @@ import { LazyLoadComponent } from './components/lazy-load/lazy-load.component';
     FeaturesComponent,
     LoginComponent,
     NotFoundComponent,
-    LazyLoadComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
