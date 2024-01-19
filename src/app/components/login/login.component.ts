@@ -11,10 +11,16 @@ export class LoginComponent {
   login = (username: string) => {
     console.log('loged In');
     this.router;
-    username != ''
-      ? this.router.navigate(['/home'], {
-          queryParams: { user: username },
-        })
-      : alert('Enter Valid Username');
+    if (username == 'admin') {
+      this.router.navigate(['/admin'], {
+        queryParams: { user: username },
+      });
+    } else if (username != '') {
+      this.router.navigate(['/home'], {
+        queryParams: { user: username },
+      });
+    } else {
+      alert('Enter Valid ');
+    }
   };
 }
